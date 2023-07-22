@@ -7,7 +7,9 @@ import ShareContext from "../Context/ShareContext";
 import UserContext from "../Context/UserContex";
 import RealTimeDataContext from "../Context/RealTimeDataContext";
 import DayHistoryContext from "../Context/DayHistoryContext";
-const baseUrl = "http://localhost:5000";
+
+// const baseUrl = "http://localhost:5000";
+const baseUrl = "https://backed-for-market-mastery.onrender.com";
 
 const toastyStyle = {
   position: "top-right",

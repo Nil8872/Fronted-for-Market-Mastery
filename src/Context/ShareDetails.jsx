@@ -44,7 +44,7 @@ function ShareDetails(props) {
     });
 
     const result = await shares.json();
-    console.log(result)
+    
       setShares(result);
   };
 

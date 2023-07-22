@@ -6,7 +6,7 @@ function DayHistory(props) {
     const [dayHistory, setDayHistory] = useState([]);
     const [historyCount, setHistoryCount] = useState(0); 
   const token = localStorage.getItem("token"); 
-  console.log(token);
+ 
 
 
 

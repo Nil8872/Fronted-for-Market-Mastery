@@ -6,7 +6,7 @@ import ShareContext from "./ShareContext";
 // const baseUrl = "http://localhost:5000"
 const baseUrl = "https://backed-for-market-mastery.onrender.com"
 const token = localStorage.getItem("token");
-console.log(token);
+ 
 
 function OpenOrder(props) {
   const [openOrders, setOpenOrders] = useState([]);
@@ -41,7 +41,7 @@ function OpenOrder(props) {
                 getShareLTP(order.sharename) - order.price
                 );  
               if (difference >= range[0] && difference <= range[1]) {
-                console.log(order._id);
+            
                 await cancleOrder(order._id);
                 setOpenOrderCount((c) => c + 1);  
                 
@@ -99,8 +99,8 @@ function OpenOrder(props) {
         "auth-token": token,
       },
       body: JSON.stringify(orderData),
-    };
-
+    };  
+ 
     try {
       const result = await fetch(`${baseUrl}/api/openOrder/add`, option);
       console.log(await result.json());
@@ -120,10 +120,11 @@ function OpenOrder(props) {
 
     try {
 
-      await fetch(`${baseUrl}/api/openOrder/cancle/${id}`, option);
+      const resut = await fetch(`${baseUrl}/api/openOrder/cancle/${id}`, option);
+  
  
     } catch (error) {
-      
+      console.log(error);
     }
 
   }

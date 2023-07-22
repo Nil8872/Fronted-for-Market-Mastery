@@ -7,7 +7,9 @@ import OpenOrderContext from "../Context/OpenOrderContext";
 import RealTimeDataContext from "../Context/RealTimeDataContext";
 import UserContext from "../Context/UserContex";
 import ShareContext from "../Context/ShareContext";
-const baseUrl = "http://localhost:5000";
+// const baseUrl = "http://localhost:5000";
+const baseUrl = "https://backed-for-market-mastery.onrender.com";
+
 
 const toastyStyle = {
   position: "top-right",
@@ -192,7 +194,7 @@ function OrderSidebar() {
             
             <tbody>
               {
-              openOrders.length > 1? (openOrders.map((order) => {
+              openOrders.length >= 1? (openOrders.map((order) => {
                 return (
                   <>
                     <tr>

@@ -17,8 +17,7 @@ function OrederExecute(props) {
         if(!token){
     
         }
-        else{
-          console.log("called")
+        else{ 
           getExeOrders();
         }
       },[exeOrderCount])

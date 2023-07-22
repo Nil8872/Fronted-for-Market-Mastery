@@ -118,7 +118,7 @@ function WatchList() {
 { (searchShare.length<3) ? 
 (
 
- watchListShares.length > 1?(
+ watchListShares.length >= 1?(
   watchListShares.map((share)=>{
     
     if(sharePrices.length!==0){

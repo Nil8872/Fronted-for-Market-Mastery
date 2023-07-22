@@ -45,18 +45,15 @@ const style = {
   borderRadius: 1,
 };
 
-function DraggableModal(props) {
-  console.log("Rander DraggableModeal function component")
+function DraggableModal(props) { 
+
   const { sharePrices } = useContext(RealTimeDataContext);
-  const { setShareCount, addShare, shares, updateShare } =
-    useContext(ShareContext);
+  const { setShareCount, addShare, shares, updateShare } = useContext(ShareContext);
   const { addOpenOrder, setOpenOrderCount } = useContext(OpenOrderContext);
 
   const {setButtonDetails, action, open, handleclose, sharename, lastprice } = props;
-  const newObj = props
-  console.log("*******************")
-  console.log("new Props : ", newObj);
-  console.log("*******************")
+ 
+   
   const { user, updateUser, setUserCount } = useContext(UserContext);
   const { setExeOrderCount, addExeOreder } = useContext(OrederExecuteContext);
   const id = user._id;
